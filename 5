@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задание 5t</title>
+</head>
+
+<body>
+    <p id="one">Text text text</p>
+    <div class="card">John Doe
+        <p>Some new text</p>
+        <h2>Text</h2>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a nibh turpis. Nam accumsan, velit nec pellentesque molestie, magna dolor ultricies dui, a ullamcorper risus sem nec tortor. Quisque imperdiet, dolor eget eleifend maximus, ex leo dapibus
+        erat, quis auctor tortor massa quis mi. Sed non vestibulum sapien.</p>
+    <h2 class="card">889898</h2>
+    <div class="card">Nulla pharetra turpis lacus, non sodales urna rhoncus congue. </div>
+    <script>
+        function $() {
+            if (element.startsWith("#")) { //поиск для ID
+                if (charAt(0))
+                    var subEl = element.substring(1)
+                var element1 = document.getElementById(subEl).innerText;
+                console.log(element1)
+            } else if (element.startsWith(".")) { // поиск для класса
+                var subEl2 = element.substring(1)
+                var element2 = document.getElementsByClassName(subEl2);
+                if (element2.length > 1) { // условие для повторяющихся классов
+                    console.log(element2)
+                } else { // условие для одного класса
+                    var elemInd;
+                    for (var i = 0; i < element2.length; i++) {
+                        var elemInd = element2[i].innerText;
+                        console.log(elemInd)
+                    }
+                }
+            } else { // тег
+                var elements = document.getElementsByTagName(element);
+                for (var x = 0; x < elements.length; x++) {
+                    var tag = elements[x].innerText;
+                    console.log(tag)
+                }
+
+            }
+        }
+
+        var element = prompt("Vvedite dannie", )
+        $(element)
+    </script>
+</body>
+
+</html>
