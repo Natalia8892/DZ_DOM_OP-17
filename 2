@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2</title>
+</head>
+
+
+<body>
+    <script>
+        var elem = document.createElement("li")
+        var tag = elem.tagName;
+
+        function One() {
+            return elem;
+        }
+
+        One(tag);
+
+        function Two() { //вставка в body
+            document.body.appendChild(elem);
+        }
+
+        Two(elem);
+    </script>
+</body>
+
+</html>
