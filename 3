@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+</head>
+
+<body>
+
+    <script>
+        var element = document.createElement("p");
+        var elemApp = document.body.appendChild(element);
+        var name = element.tagName;
+        var collection;
+
+        function check() {
+            collection = (document.getElementsByTagName("body")[0].getElementsByTagName(name))
+            if (collection.length > 0) {
+                element.remove()
+            } else {
+                return document.write("Нельзя удалить этот тег, потому что в вёрстке этого тега нет")
+            }
+        }
+        check(element);
+    </script>
+
+</body>
+
+</html>
