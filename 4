@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задание 4</title>
+</head>
+
+<body>
+    <p id="one">Text text text</p>
+    <div class="card-body">John Doe
+        <p>Some new text</p>
+    </div>
+    <script>
+        function getInnerTextOfElement() {
+            if (element.startsWith("#")) {
+                var subEl = element.substring(1);
+                var element1 = document.getElementById(subEl).innerText;
+                return element1
+            } else if (element.startsWith(".")) {
+                var subEl2 = element.substring(1);
+                var element2 = document.getElementsByClassName(subEl2);
+                var elemInd;
+                for (var i = 0; i < element2.length; i++) {
+                    var elemInd = element2[i].innerText;
+                    return elemInd
+                }
+            }
+        }
+
+        var element = prompt("Vvedite dannie", )
+        getInnerTextOfElement(element)
+    </script>
+
+</body>
+
+</html>
