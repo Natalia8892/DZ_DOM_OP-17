@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+
+</head>
+
+<body>
+    <script>
+        var img2 = prompt("Image");
+        var deg = parseInt(prompt("deg"));
+        var c = 0;
+
+        if ((img2.startsWith("https://")) || (img2.startsWith("http://"))) {
+            if (isNaN(deg) === false) {
+                for (var i = 0; i < 5; i++) {
+                    c += deg;
+
+                    function myFunction() {
+                        var img = document.createElement("img");
+                        img.src = img2;
+                        document.body.appendChild(img);
+                        img.style.transform = "rotate(" + c + "deg)";
+                    }
+                    myFunction();
+                }
+            } else {
+                console.log(false);
+            }
+        } else {
+            console.log(false);
+        }
+    </script>
+</body>
+
+
+</html>
